@@ -4,6 +4,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:wechat_camera_picker/wechat_camera_picker.dart';
+import 'package:photo_manager_image_provider/photo_manager_image_provider.dart' as provider;
 
 class AssetWidgetBuilder extends StatelessWidget {
   const AssetWidgetBuilder({
@@ -54,7 +55,7 @@ class AssetWidgetBuilder extends StatelessWidget {
 
   Widget _imageAssetWidget(BuildContext context) {
     return Image(
-      image: AssetEntityImageProvider(entity, isOriginal: false),
+      image: provider.AssetEntityImageProvider(entity, isOriginal: false),
       fit: BoxFit.cover,
     );
   }

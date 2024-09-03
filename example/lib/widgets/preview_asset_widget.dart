@@ -7,6 +7,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:wechat_camera_picker/wechat_camera_picker.dart';
+import 'package:photo_manager_image_provider/photo_manager_image_provider.dart' as provider;
 
 class PreviewAssetWidget extends StatefulWidget {
   const PreviewAssetWidget(this.asset, {super.key});
@@ -65,7 +66,7 @@ class _PreviewAssetWidgetState extends State<PreviewAssetWidget> {
   }
 
   Widget _buildImage(BuildContext context) {
-    return AssetEntityImage(widget.asset);
+    return provider.AssetEntityImage(widget.asset);
   }
 
   Widget _buildVideo(BuildContext context) {
